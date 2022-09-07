@@ -12,7 +12,8 @@
           $this->pdo = BaseDatos::Conexion();
       }
 
-      public function validar($correo, $password, $popo)
+      
+      public function validar($correo, $password,$pipiFtPopo)
       {
           try {
               $query = $this->pdo->prepare("SELECT * FROM usuarios WHERE correo=? AND password=?;");
